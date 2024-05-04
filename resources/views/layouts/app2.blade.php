@@ -7,7 +7,8 @@
   
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/glightbox.css') }}">
+  
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/lightbox.css') }}">
 
   <title>@yield('title')</title>
 </head>

@@ -7,7 +7,7 @@
     <div class="w-full h-full p-6">
 
         <div class="p-2 mx-auto">
-            <img class="xl:size-3/4 mx-auto" src="{{ Vite::asset('resources/images/KeeBod2.png') }}">
+            <img class="xl:size-3/4 mx-auto" src="{{ asset('images/KeeBod2.png') }}">
         </div>
 
 
@@ -16,38 +16,51 @@
                 SCROLL TO EXPLORE
             </h1>
             <div class="max-w-screen-lg mx-auto">
-                <img class="mx-auto w-16 h-16" src="{{ Vite::asset('resources/images/down-arrow.svg') }}">
+                <img class="mx-auto w-16 h-16" src="{{ asset('images/down-arrow.svg') }}">
             </div>
         </div>
+
+        
 
         <div class="py-20">
 
         </div>
 
 
-        <div class="p-2 xl:flex max-w-screen">
-            <div class="flex flex-col items-center w-50% mx-auto">
-                <img class="w-full h-auto mb-4" src="{{ Vite::asset('resources/images/Keyboard1.png') }}"
-                    alt="Big Keyboard Image">
-
-                <div class="flex justify-center">
-                    <img class="w-1/4 h-auto mx-1" src="{{ Vite::asset('resources/images/Keyboard2.png') }}"
-                        alt="Small Keyboard Image">
-                    <img class="w-1/4 h-auto mx-1" src="{{ Vite::asset('resources/images/Keyboard3.png') }}"
-                        alt="Small Keyboard Image">
-                    <img class="w-1/4 h-auto mx-1" src="{{ Vite::asset('resources/images/Keyboard4.png') }}"
-                        alt="Small Keyboard Image">
-                    <img class="w-1/4 h-auto mx-1" src="{{ Vite::asset('resources/images/Keyboard5.png') }}"
-                        alt="Small Keyboard Image">
+        <div class="p-2 lg:flex max-w-screen justify-center">
+            <div class="w-full lg:w-4/12">
+                <a href="{{ asset('images/Keyboard1.png') }}" data-lightbox="keyboards" data-title="ENCHANT ERGO 1">
+                    <img class="lg:pr-12 h-auto mb-4 transition duration-300 ease-in-out transform hover:brightness-75"
+                        src="{{ asset('images/Keyboard1.png') }}" alt="Big Keyboard Image">
+                </a>
+                <div class="flex flex-wrap">
+                    <a href="{{ asset('images/Keyboard2.png') }}" data-lightbox="keyboards" data-title="ENCHANT ERGO 2"
+                        class="w-2/12 mx-1 mb-4">
+                        <img class="w-full h-auto transition duration-300 ease-in-out transform hover:brightness-75"
+                            src="{{ asset('images/Keyboard2.png') }}" alt="Small Keyboard Image">
+                    </a>
+                    <a href="{{ asset('images/Keyboard3.png') }}" data-lightbox="keyboards" data-title="ENCHANT ERGO 3"
+                        class="w-2/12 mx-1 mb-4">
+                        <img class="w-full h-auto transition duration-300 ease-in-out transform hover:brightness-75"
+                            src="{{ asset('images/Keyboard3.png') }}" alt="Small Keyboard Image">
+                    </a>
+                    <a href="{{ asset('images/Keyboard4.png') }}" data-lightbox="keyboards" data-title="ENCHANT ERGO 4"
+                        class="w-2/12 mx-1 mb-4">
+                        <img class="w-full h-auto transition duration-300 ease-in-out transform hover:brightness-75"
+                            src="{{ asset('images/Keyboard4.png') }}" alt="Small Keyboard Image">
+                    </a>
+                    <a href="{{ asset('images/Keyboard5.png') }}" data-lightbox="keyboards" data-title="ENCHANT ERGO 5"
+                        class="w-2/12 mx-1 mb-4">
+                        <img class="w-full h-auto transition duration-300 ease-in-out transform hover:brightness-75"
+                            src="{{ asset('images/Keyboard5.png') }}" alt="Small Keyboard Image">
+                    </a>
                 </div>
+
             </div>
 
 
-
-
-
-            <div class="w-50% mx-auto">
-                <div class="justify-center p-8 py-4">
+            <div class="w-full lg:w-4/12">
+                <div class="justify-center p-8 py-2">
                     <h1 class="font-archivo text-2xl xl:text-xl">ENCHANT <span
                             class="text-transparent font-outline-1">ERGO</span></h1>
                     <h1 class="text-xl">
@@ -77,23 +90,23 @@
 
                     <div class="mt-2 flex flex-wrap">
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             CHERRY RED
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             ALPACCA
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             BOBA U4T
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             BOBA U4T
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             CS AIR
                         </p>
                     </div>
@@ -101,23 +114,23 @@
                     <h1 class="mt-6 font-archivo text-2xl xl:text-xl 2xl:text-2xl">CASE</h1>
                     <div class="mt-2 flex flex-wrap">
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             CLEAR
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             BLUE
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             BLACK MATTE
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             BLACK GLOSS
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             PATINA
                         </p>
                     </div>
@@ -129,11 +142,16 @@
                         </a>
                     </button>
                 </div>
-
-
             </div>
         </div>
 
+        
+
+
+        
+
     </div>
     {{-- @include("components/bottombar") --}}
+
+    <script src="{{ asset('js/lightbox-plus-jquery.js') }}"></script>
 @endsection
