@@ -32,92 +32,92 @@ class CustomKeyboard extends Component
         $this->currentStep--;
     }
 
-    public function caseMaterial()
+    public function caseMaterialStep()
     {
-        // $this->validate([
-        //     "type" => "required",
-        // ]);
+        $this->validate([
+            "type" => "required",
+        ]);
 
         $this->currentStep = 2;
     }
 
-    public function switch()
+    public function switchStep()
     {
-        // $this->validate([
-        //     "case_material" => "required",
-        // ]);
+        $this->validate([
+            "case_material" => "required",
+        ]);
 
         $this->currentStep = 3;
     }
 
-    public function keycaps()
+    public function keycapsStep()
     {
-        // $this->validate([
-        //     "switch" => "required",
-        // ]);
+        $this->validate([
+            "switch" => "required",
+        ]);
 
         $this->currentStep = 4;
     }
 
-    public function accentKeycaps()
+    public function accentKeycapsStep()
     {
-        // $this->validate([
-        //     "keycaps" => "required",
-        // ]);
+        $this->validate([
+            "keycaps" => "required",
+        ]);
 
         $this->currentStep = 5;
     }
 
-    public function switch_lubrication()
+    public function switchLubricationStep()
     {
-        // $this->validate([
-        //     "accent_keycaps" => "required",
-        // ]);
+        $this->validate([
+            "accent_keycaps" => "required",
+        ]);
 
         $this->currentStep = 6;
     }
 
-    public function stabilizers()
+    public function stabilizersStep()
     {
-        // $this->validate([
-        //     "switch_lubrication" => "required",
-        // ]);
+        $this->validate([
+            "switch_lubrication" => "required",
+        ]);
 
         $this->currentStep = 7;
     }
 
-    public function connection()
+    public function connectionStep()
     {
-        // $this->validate([
-        //     "stabilizers" => "required",
-        // ]);
+        $this->validate([
+            "stabilizers" => "required",
+        ]);
 
         $this->currentStep = 8;
     }
 
-    public function mountingType()
+    public function mountingTypeStep()
     {
-        // $this->validate([
-        //     "connection" => "required",
-        // ]);
+        $this->validate([
+            "connection" => "required",
+        ]);
 
         $this->currentStep = 9;
     }
 
-    public function assembly()
+    public function assemblyStep()
     {
-        // $this->validate([
-        //     "mounting_type" => "required",
-        // ]);
+        $this->validate([
+            "mounting_type" => "required",
+        ]);
 
         $this->currentStep = 10;
     }
 
-    public function order()
+    public function orderStep()
     {
-        // $this->validate([
-        //     "assembly" => "required",
-        // ]);
+        $this->validate([
+            "assembly" => "required",
+        ]);
 
         $this->currentStep = 11;
     }
