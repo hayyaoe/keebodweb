@@ -7,4 +7,8 @@ Route::get("/", function () {
     return view("landing");
 });
 
+Route::get('/ai-price-plan', function () {
+    return view('ai-price-plan');
+});
+
 Route::get("/custom-keyboard", CustomKeyboard::class)->name("custom-keyboard");
