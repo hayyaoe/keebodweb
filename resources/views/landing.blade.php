@@ -9,7 +9,7 @@
         <h1>KEE</h1>
         <h1 class="text-transparent font-outline-1">BOD</h1>
     </div>
-    <h1 class="-translate-y-3 font-archivo italic text-2xl text-center w-full font-outline-1 sm:text-4.5xl sm:-translate-y-3 md:text-6xl md:-translate-y-6 xl:text-7.5xl xl:-translate-y-7 2xl:text-8.5xl 2xl:-translate-y-10"> BUILD YOUR DREAM </h1>
+    <h1 class="font-archivo italic text-2xl text-center w-full font-outline-1 sm:text-4.5xl md:text-6xl md:-translate-y-6 xl:text-7.5xl xl:-translate-y-7 2xl:text-8.5xl 2xl:-translate-y-10"> BUILD YOUR DREAM </h1>
 </div>
 @include("components/bottombar")
 @endsection
