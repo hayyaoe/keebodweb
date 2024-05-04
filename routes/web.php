@@ -3,8 +3,8 @@
 use App\Livewire\CustomKeyboard;
 use Illuminate\Support\Facades\Route;
 
-Route::get("/", function () {
-    return view("landing");
+Route::get('/', function () {
+    return view('prebuilt');
 });
 
 Route::get('/ai-price-plan', function () {
