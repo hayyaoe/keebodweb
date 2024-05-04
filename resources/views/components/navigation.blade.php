@@ -14,13 +14,13 @@
 
     <ul class="absolute w-full bg-[#E8F4FA] border-b-1 border-black left-0 pl-6 pb-6 opacity-0 top-[-400px] md:opacity-100 md:border-none md:flex md:items-center md:z-auto md:static md:pb-0 md:w-auto">
         <li class="m-4">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">CUSTOM KEYBOARD</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl">CUSTOM KEYBOARD</h5></a>
         </li>
         <li class="m-4">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">KEYBOARD REPAIR</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl">KEYBOARD REPAIR</h5></a>
         </li>
         <li class="m-4">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">KEYBOARD MOD</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl">KEYBOARD MOD</h5></a>
         </li>
         <li class="m-4 md:hidden">
             <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">PARTS STORE</h5></a>
