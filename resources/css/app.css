@@ -23,4 +23,8 @@
         -webkit-transform: translateY(0.5px);
         transform: translateY(0.5px);
     }
+    .text-jumbo {
+        font-size: 200px;
+        line-height: 1;
+    }
 }

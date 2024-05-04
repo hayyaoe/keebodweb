@@ -1,4 +1,4 @@
-<nav class="p-4 mb-2 bg-[#E8F4FA] md:flex md:items-center md:justify-center">
+<nav class="p-4 fixed w-full bg-[#E8F4FA] md:flex md:items-center md:justify-center md:p-0 md:pt-24">
     <div class="flex items-center justify-between md:hidden md:my-0">
         <span class="font-archivo text-3xl">
             <a href="" class="flex mx-4">
@@ -12,24 +12,24 @@
         </span>
     </div>
 
-    <ul class="absolute w-full bg-[#E8F4FA] border-b-1 border-black left-0 pl-6 opacity-0 top-[-400px] md:opacity-100 md:border-none md:flex md:items-center md:z-auto md:static md:w-auto">
+    <ul class="absolute w-full bg-[#E8F4FA] border-b-1 border-black left-0 pl-6 pb-6 opacity-0 top-[-400px] md:opacity-100 md:border-none md:flex md:items-center md:z-auto md:static md:pb-0 md:w-auto">
         <li class="m-4">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-xl transition ease-in hover:text-black hover:font-outline-none hover:line-through">CUSTOM KEYBOARD</h5></a>
-        </li>
-        <li class="m-4">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-xl transition ease-in hover:text-black hover:font-outline-none hover:line-through">KEYBOARD REPAIR</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">CUSTOM KEYBOARD</h5></a>
         </li>
         <li class="m-4">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-xl transition ease-in hover:text-black hover:font-outline-none hover:line-through">KEYBOARD MOD</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">KEYBOARD REPAIR</h5></a>
+        </li>
+        <li class="m-4">
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">KEYBOARD MOD</h5></a>
         </li>
         <li class="m-4 md:hidden">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-xl transition ease-in hover:text-black hover:font-outline-none hover:line-through">PARTS STORE</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">PARTS STORE</h5></a>
         </li>
         <li class="m-4 md:hidden">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-xl transition ease-in hover:text-black hover:font-outline-none hover:line-through">LATEST PREBUILT</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">LATEST PREBUILT</h5></a>
         </li>
         <li class="m-4 md:hidden">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-xl transition ease-in hover:text-black hover:font-outline-none hover:line-through">AI SUGGESTION</h5></a>
+            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">AI SUGGESTION</h5></a>
         </li>
     </ul>
 
