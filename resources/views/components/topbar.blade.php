@@ -1,7 +1,7 @@
 
 <body class="bg-blue-500">
-	<nav class="relative nav-blur px-4 py-4 flex justify-between items-center sticky top-0 z-10 mb-20">
-		<a class="text-3xl font-bold leading-none pl-8" href="#">
+	<nav class="relative nav-blur px-4 py-4 flex justify-between items-center sticky top-0 z-10 mb-4">
+		<a class="text-3xl font-bold leading-none pl-8" href="/">
 			<p class="font-archivo italic">KEE<span class="text-transparent font-outline-1">BOD</span></p>
 		</a>
 		<div class="lg:hidden">
@@ -33,12 +33,12 @@
       <li class="text-gray-300">
 				|
 			</li>
-			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="#">Lastest Prebuilt</a></li>
+			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="/prebuilt">Lastest Prebuilt</a></li>
 		</ul>
     <div class="hidden lg:block pr-8 font-archivo text-xl">
       <div class="flex gap-2">
-        <p class="font-outline-1 text-transparent">ID</p>
-        <p>US</p>
+        <a href="/"><p class="font-outline-1 text-transparent">ID</p></a>
+        <a href="/"><p>US</p></a>
       </div>
     </div>
 	</nav>

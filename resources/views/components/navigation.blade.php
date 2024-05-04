@@ -26,7 +26,7 @@
             <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">PARTS STORE</h5></a>
         </li>
         <li class="m-4 md:hidden">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">LATEST PREBUILT</h5></a>
+            <a href="/prebuilt"><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">LATEST PREBUILT</h5></a>
         </li>
         <li class="m-4 md:hidden">
             <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">AI SUGGESTION</h5></a>
