@@ -7,6 +7,13 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <title>@yield('title')</title>
+  <style>
+    .nav-blur {
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(232, 244, 250, 0.9);
+  }
+  </style>
 </head>
 <body class="w-screen h-screen bg-[#E8F4FA]">
     @yield('body')
