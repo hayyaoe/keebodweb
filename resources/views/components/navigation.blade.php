@@ -12,7 +12,7 @@
         </span>
     </div>
 
-    <ul class="absolute w-full bg-[#E8F4FA] border-b-1 border-black left-0 pl-6 pb-6 opacity-0 top-[-400px] md:opacity-100 md:border-none md:flex md:items-center md:z-auto md:static md:pb-0 md:w-auto">
+    <ul class="absolute w-full bg-[#E8F4FA] border-b-1 border-black left-0 pl-6 pb-6 opacity-0 top-[-400px] md:opacity-100 md:border-none md:flex md:items-center md:z-10 md:static md:pb-0 md:w-auto md:space-x-6 lg:space-x-16 xl:space-x-28">
         <li class="m-4">
             <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl">CUSTOM KEYBOARD</h5></a>
         </li>
