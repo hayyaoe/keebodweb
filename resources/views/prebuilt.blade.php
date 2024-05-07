@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        
+
 
         <div class="py-20">
 
@@ -90,23 +90,19 @@
 
                     <div class="mt-2 flex flex-wrap">
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             CHERRY RED
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             ALPACCA
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             BOBA U4T
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                            BOBA U4T
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             CS AIR
                         </p>
                     </div>
@@ -114,29 +110,29 @@
                     <h1 class="mt-6 font-archivo text-2xl xl:text-xl 2xl:text-2xl">CASE</h1>
                     <div class="mt-2 flex flex-wrap">
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             CLEAR
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             BLUE
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             BLACK MATTE
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             BLACK GLOSS
                         </p>
                         <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
                             PATINA
                         </p>
                     </div>
 
                     <button
-                        class="mt-8 text-xl w-full mr-2 mb-2 bg-green-500 hover:bg-transparent hover:text-green-500 font-archivo text-white font-semibold py-2 px-4 border border-green-800 rounded shadow">
+                        class="mt-8 text-xl w-full mr-2 mb-2 bg-green-500 hover:bg-transparent hover:text-green-500 font-archivo text-white font-semibold py-2 px-4 border border-green-800">
                         <a href="/">
                             BUY
                         </a>
@@ -145,10 +141,10 @@
             </div>
         </div>
 
-        
 
 
-        
+
+
 
     </div>
     {{-- @include("components/bottombar") --}}

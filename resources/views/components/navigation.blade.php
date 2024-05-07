@@ -1,9 +1,9 @@
 <nav class="p-4 fixed w-full bg-[#E8F4FA] md:flex md:items-center md:justify-center md:p-0 md:pt-24">
     <div class="flex items-center justify-between md:hidden md:my-0">
         <span class="font-archivo text-3xl">
-            <a href="" class="flex mx-4">
-                <h1>KEE</h1>
-                <h1 class="text-transparent font-outline-1">BOD</h1>
+            <a href="{{ route('home') }}" class="flex mx-4">
+                <h1 class="italic">KEE</h1>
+                <h1 class="text-transparent font-outline-1 italic">BOD</h1>
             </a>
         </span>
 
@@ -26,10 +26,10 @@
             <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">PARTS STORE</h5></a>
         </li>
         <li class="m-4 md:hidden">
-            <a href="/prebuilt"><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">LATEST PREBUILT</h5></a>
+            <a href="{{ route('prebuilt') }}"><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">LATEST PREBUILT</h5></a>
         </li>
         <li class="m-4 md:hidden">
-            <a href=""><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">AI SUGGESTION</h5></a>
+            <a href="{{ route('ai-suggestion') }}"><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through">AI SUGGESTION</h5></a>
         </li>
     </ul>
 

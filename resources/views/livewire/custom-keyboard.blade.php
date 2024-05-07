@@ -3,8 +3,8 @@
         <div class="flex items-center justify-between">
             <span class="font-archivo text-3xl">
                 <a href="{{ route('home') }}" class="flex mx-4">
-                    <h1>KEE</h1>
-                    <h1 class="text-transparent font-outline-1">BOD</h1>
+                    <h1 class="italic">KEE</h1>
+                    <h1 class="text-transparent font-outline-1 italic">BOD</h1>
                 </a>
             </span>
         </div>

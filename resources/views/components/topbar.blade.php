@@ -1,9 +1,12 @@
 
 <body class="bg-blue-500">
 	<nav class="relative nav-blur px-4 py-4 flex justify-between items-center sticky top-0 z-10 mb-4">
-		<a class="text-3xl font-bold leading-none pl-8" href="/">
-			<p class="font-archivo italic">KEE<span class="text-transparent font-outline-1">BOD</span></p>
-		</a>
+		<span class="font-archivo text-3xl">
+            <a href="{{ route('home') }}" class="flex mx-4">
+                <h1 class="italic">KEE</h1>
+                <h1 class="text-transparent font-outline-1 italic">BOD</h1>
+            </a>
+		</span>
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-gray-900 p-3">
 				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
