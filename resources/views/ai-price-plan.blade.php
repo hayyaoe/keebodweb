@@ -4,7 +4,7 @@
 @include("components/topbar")
 <div class="relative w-full h-full">
   <div class="absolute hidden lg:block h-96"></div>
-  <div class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-">
   <div class="max-w-xl mb-10 md:mx-auto px-8 sm:text-center lg:max-w-2xl md:mb-12">
     <h2 class="top-10 font-archivo max-w-2lg mb-6 text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-5xl md:mx-auto">
       <span class="font-outline-1 text-transparent">AI Suggestion </span> Price Plan
@@ -56,12 +56,12 @@
             <p class="font-medium text-gray-300">Basic fonts</p>
           </li>
         </ul>
-        <button
-          type="submit"
+        <a
+          href="{{ route('coming-soon') }}"
           class="inline-flex items-center justify-center w-full h-12 px-6 border-2 border-teal-400 font-semibold tracking-wide text-teal-400 transition duration-200 rounded shadow-md bg-transparent hover:bg-teal-400 hover:text-gray-900 focus:shadow-outline focus:outline-none"
         >
           Get Now
-        </button>
+      </a>
       </div>
       <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
       <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
@@ -116,12 +116,12 @@
             <p class="font-medium text-gray-300">Download image</p>
           </li>
         </ul>
-        <button
-          type="submit"
-          class="mb-8inline-flex items-center justify-center w-full h-12 px-6 border-2 border-teal-400 font-semibold tracking-wide text-teal-400 transition duration-200 rounded shadow-md bg-transparent hover:bg-teal-400 hover:text-gray-900 focus:shadow-outline focus:outline-none"
+        <a
+          href="{{ route('coming-soon') }}"
+          class="mb-8 inline-flex items-center justify-center w-full h-12 px-6 border-2 border-teal-400 font-semibold tracking-wide text-teal-400 transition duration-200 rounded shadow-md bg-transparent hover:bg-teal-400 hover:text-gray-900 focus:shadow-outline focus:outline-none"
         >
           Get Now
-        </button>
+        </a>
       </div>
       <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
       <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>

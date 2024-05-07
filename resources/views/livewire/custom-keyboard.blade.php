@@ -22,22 +22,10 @@
             <div class="w-full flex flex-col items-center mb-6">
                 <h1 class="font-archivo text-black text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">SELECT KEYBOARD TYPE</h1>
                 <div class="flex space-x-2">
-                    <input type="radio" id="forty" wire:model="type" value="forty" class="hidden" required />
-                    <label for="forty" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
-                        <div class="block">
-                            <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">40%</div>
-                        </div>
-                    </label>
                     <input type="radio" id="sixty" wire:model="type" value="sixty" class="hidden" required />
                     <label for="sixty" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
                         <div class="block">
                             <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">60%</div>
-                        </div>
-                    </label>
-                    <input type="radio" id="tkl" wire:model="type" value="tkl" class="hidden" required />
-                    <label for="tkl" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
-                        <div class="block">
-                            <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">TKL</div>
                         </div>
                     </label>
                 </div>
@@ -47,9 +35,9 @@
             </div>
             @elseif($currentStep === 2)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp1.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -81,9 +69,9 @@
             </div>
             @elseif($currentStep === 3)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp1.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -115,9 +103,9 @@
             </div>
             @elseif($currentStep === 4)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp2.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -149,9 +137,9 @@
             </div>
             @elseif($currentStep === 5)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp2.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -183,9 +171,9 @@
             </div>
             @elseif($currentStep === 6)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp2.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -217,9 +205,9 @@
             </div>
             @elseif($currentStep === 7)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp3.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -251,9 +239,9 @@
             </div>
             @elseif($currentStep === 8)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp3.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -285,9 +273,9 @@
             </div>
             @elseif($currentStep === 9)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp3.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
@@ -319,9 +307,9 @@
             </div>
             @elseif($currentStep === 10)
             <div class="w-full h-3/6 flex flex-col items-center">
-                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl ">PREVIEW</h1>
-                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-full">
-                    IMAGE HERE
+                <h1 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in md:text-xl lg:text-2xl">PREVIEW</h1>
+                <div class="mx-10 my-2 border border-black w-5/6 md:w-4/6 h-5/6 flex justify-center items-center"> <!-- Updated classes here -->
+                    <img src="{{ asset('images/KeyboardMockUp3.png') }}" class="h-4/6">
                 </div>
             </div>
             <div class="w-full flex flex-col items-center mb-6">
