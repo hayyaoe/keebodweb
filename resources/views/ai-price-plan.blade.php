@@ -1,4 +1,4 @@
-@extends('layouts/app')
+Ka@extends('layouts/app')
 
 @section("body")
 @include("components/topbar")
@@ -10,7 +10,7 @@
       <span class="font-outline-1 text-transparent">AI Suggestion </span> Price Plan
     </h2>
     <p class="text-sm text-gray-600 md:text-md font-semibold font-archivo">
-      We are introducing a revolutionary feature that utilizes AI to help you design your keyboard according to your wants and needs. 
+      We are introducing a revolutionary feature that utilizes AI to help you design your keyboard according to your wants and needs.
     </p>
   </div>
   <div class="grid font-archivo max-w-screen-md gap-10 md:grid-cols-2 sm:mx-auto">
@@ -22,9 +22,9 @@
           </p>
           <div class="flex items-center justify-center py-5">
             <p class="mr-2 text-5xl font-semibold text-white lg:text-[70px]">
-              $39
+              $5
             </p>
-            <p class="text-lg text-gray-500">/ day</p>
+            <p class="text-lg text-gray-500">/ month</p>
           </div>
         </div>
         <ul class="mb-8 space-y-2">
@@ -73,9 +73,9 @@
           <p class="text-4xl font-medium tracking-wide text-teal-400">Pro Plan</p>
           <div class="flex items-center justify-center py-5">
             <p class="mr-2 text-5xl font-semibold text-white lg:text-[80px]">
-              $59
+              $30
             </p>
-            <p class="text-lg text-gray-500">/ day</p>
+            <p class="text-lg text-gray-500">/ year</p>
           </div>
         </div>
         <ul class="mb-8 space-y-2">
