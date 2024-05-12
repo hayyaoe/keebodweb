@@ -1,6 +1,6 @@
 
 <body class="bg-blue-500">
-	<nav class="relative nav-blur px-4 py-4 flex justify-between items-center sticky top-0 z-10 mb-4">
+	<nav class="nav-blur px-4 py-4 flex justify-between items-center sticky top-0 z-10 mb-4">
 		<span class="font-archivo text-3xl">
             <a href="{{ route('home') }}" class="flex mx-4">
                 <h1 class="italic">KEE</h1>

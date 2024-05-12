@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+// models
+use App\Models\CustomOrder;
+
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
@@ -43,5 +46,9 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function customOrders(){
+    return $this->hasMany(CustomOrder::class);
     }
 }
