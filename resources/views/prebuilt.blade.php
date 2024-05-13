@@ -131,12 +131,12 @@
                         </p>
                     </div>
 
+                     <a href="{{ route('subscribe') }}">
                     <button
                         class="mt-8 text-xl w-full mr-2 mb-2 bg-green-500 hover:bg-transparent hover:text-green-500 font-archivo text-white font-semibold py-2 px-4 border border-green-800">
-                        <a href="/">
                             BUY
-                        </a>
                     </button>
+                     </a>
                 </div>
             </div>
         </div>

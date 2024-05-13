@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\CustomKeyboard;
+use App\Livewire\Subscribe;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
@@ -23,5 +24,6 @@ Route::get("/coming-soon", function () {
     return view("coming-soon");
 })->name("coming-soon");
 
+Route::get("/subscribe", Subscribe::class)->name("subscribe");
 
 Route::get("/custom-keyboard", CustomKeyboard::class)->name("custom-keyboard");
