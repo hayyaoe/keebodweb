@@ -12,6 +12,8 @@ use App\Models\Keycap;
 use App\Models\KeySwitch;
 use App\Models\Type;
 
+use function Laravel\Prompts\confirm;
+
 #[Layout("layouts.livewirelayout")]
 #[Title("Custom KeeBod")]
 class CustomKeyboard extends Component
@@ -25,11 +27,20 @@ class CustomKeyboard extends Component
     public $connection_id;
     public $assembly_id;
 
+    public $selectedType;
+    public $selectedKeyswitch;
+    public $selectedKeycaps;
+    public $selectedConnection;
+    public $selectedAssembly;
+
     public $typesAvailable;
     public $switchesAvailable;
     public $keycapsAvailable;
     public $connectionsAvailable;
     public $assembliesAvailable;
+
+    public $confirmorder;
+    public $total;
 
     public function mount()
     {
@@ -47,6 +58,7 @@ class CustomKeyboard extends Component
 
     public function previousStep()
     {
+        $this->confirmorder = null;
         $this->currentStep--;
     }
 
@@ -55,6 +67,8 @@ class CustomKeyboard extends Component
         $this->validate([
             "type_id" => "required",
         ]);
+
+        $this->selectedType = Type::findOrFail($this->type_id);
 
         $this->currentStep = 2;
     }
@@ -65,6 +79,8 @@ class CustomKeyboard extends Component
             "keyswitch_id" => "required",
         ]);
 
+        $this->selectedKeyswitch = KeySwitch::findOrFail($this->keyswitch_id);
+
         $this->currentStep = 3;
     }
 
@@ -73,6 +89,8 @@ class CustomKeyboard extends Component
         $this->validate([
             "keycap_id" => "required",
         ]);
+
+        $this->selectedKeycaps = Keycap::findOrFail($this->keycap_id);
 
         $this->currentStep = 4;
     }
@@ -83,6 +101,10 @@ class CustomKeyboard extends Component
             "connection_id" => "required",
         ]);
 
+        $this->selectedConnection = Connection::findOrFail(
+            $this->connection_id
+        );
+
         $this->currentStep = 5;
     }
 
@@ -92,11 +114,24 @@ class CustomKeyboard extends Component
             "assembly_id" => "required",
         ]);
 
+        $this->selectedAssembly = Assembly::findOrFail($this->assembly_id);
+
+        $this->total =
+            $this->selectedAssembly->price +
+            $this->selectedConnection->price +
+            $this->selectedKeycaps->price +
+            $this->selectedKeyswitch->price * $this->selectedType->keys +
+            $this->selectedType->price;
+
         $this->currentStep = 6;
     }
 
     public function orderStep()
     {
+        $this->validate([
+            "confirmorder" => "required",
+        ]);
+
         $data = $this->validate([
             "user_id" => "required",
             "type_id" => "required",
@@ -107,7 +142,6 @@ class CustomKeyboard extends Component
         ]);
 
         CustomOrder::create($data);
-
         $this->currentStep = 7;
     }
 }
