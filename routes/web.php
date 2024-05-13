@@ -4,7 +4,7 @@ use App\Livewire\CustomKeyboard;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
-    return view("landing");
+    return view("homepage");
 })->name("home");
 
 Route::get("/ai-input", function () {
