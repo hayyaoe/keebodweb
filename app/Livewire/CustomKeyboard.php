@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 use App\Models\Assembly;
@@ -11,6 +12,7 @@ use App\Models\CustomOrder;
 use App\Models\Keycap;
 use App\Models\KeySwitch;
 use App\Models\Type;
+use App\Models\Subscribe;
 
 use function Laravel\Prompts\confirm;
 
@@ -41,6 +43,8 @@ class CustomKeyboard extends Component
 
     public $confirmorder;
     public $total;
+
+    public $email;
 
     public function mount()
     {
@@ -143,5 +147,16 @@ class CustomKeyboard extends Component
 
         CustomOrder::create($data);
         $this->currentStep = 7;
+    }
+
+    public function subscribe()
+    {
+        $data = $this->validate([
+            "email" => "required|email",
+        ]);
+
+        redirect()->route("home");
+
+        Subscribe::create($data);
     }
 }

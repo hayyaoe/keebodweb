@@ -12,7 +12,7 @@
                     class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl xl:text-7xl font-archivo">
                     Build Your Dream <span class="text-transparent font-outline-1">Keyboard</span></h1>
                 <p class="max-w-2xl mb-6 font-normal text-gray-700 lg:mb-8 md:text-lg lg:text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa officia sint nostrum est soluta quisquam quidem neque, perferendis dolore nihil..</p>
-                <a href="#"
+                <a href="{{ route('custom-keyboard') }}"
                     class="inline-flex items-center bg-teal-400 justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-primary-700 hover:bg-teal-500 focus:ring-4 focus:ring-teal-800 dark:focus:ring-primary-900">
                     Custom Now
                     <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -44,9 +44,14 @@
                 <h2 class="mb-4 text-5xl tracking-tight font-extrabold font-archivo">Building a <span
                         class="text-transparent font-outline-1">Keyboard</span> Made Easier</h2>
                 <p class="mb-4 text-lg font-normal text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt minima ipsam amet architecto? Adipisci delectus itaque aliquam. Autem dolorum quia maxime eveniet ad impedit delectus reprehenderit ullam nobis architecto. Eum recusandae asperiores exercitationem adipisci doloremque praesentium sapiente totam possimus architecto, aperiam, illum obcaecati ipsa porro quidem nam magnam ex consectetur facere nisi quos ea? Quaerat provident fugit dolor incidunt molestias.</p>
-                <a href="#"
+                <a href="{{ route('prebuilt') }}"
                     class="inline-flex items-center bg-teal-400 justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-primary-700 hover:bg-teal-500 focus:ring-4 focus:ring-teal-800 dark:focus:ring-primary-900">
-                    Contact Us
+                    Check Pre-Built
+                    <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -180,7 +185,7 @@
                                     class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-teal-400 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-teal-400 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-teal-500">Message</label>
                             </div>
                         </div>
-                        
+
                         <div class="w-full p-2">
                             <button
                                 class="w-full mx-auto rounded border border-teal-400 bg-teal-400 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-teal-400 focus:outline-none focus:ring active:text-indigo-00">Button</button>
@@ -203,7 +208,7 @@
                     </span>
                     <p class="w-[400px] text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nihil quam ab accusantium natus impedit officia cupiditate architecto asperiores veritatis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, sint!</p>
                 </div>
-                
+
                 <div class="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-3">
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Menu</h2>
