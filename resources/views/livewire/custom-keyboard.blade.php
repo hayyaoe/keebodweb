@@ -129,18 +129,110 @@
             </div>
             <div class="w-5/6 flex justify-between items-center md:px-20">
                 <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="previousStep()">BACK</button>
-                <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="orderStep()">NEXT</button>
+                <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="orderDetailStep()">NEXT</button>
             </div>
             @elseif($currentStep === 6)
             <h1 class="font-archivo text-black text-lg mb-2 text-center transition ease-in md:text-xl lg:text-2xl">ORDER DETAILS</h1>
-            <h1 class="font-archivo text-transparent font-outline-1 text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">GET MORE UPDATES</h1>
-            <input type="email" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700 mb-2" placeholder="johndoe@example.com">
-            <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl"">PAY</button>
+            <div class="grid grid-cols-2 p-4 border border-black mb-2">
+                @if($selectedType != '')
+                <h1 class="font-archivo text-black text-lg text-left transition ease-in md:text-lg lg:text-xl col-span-2">Keyboard Type:</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-left transition ease-in md:text-lg lg:text-xl">{{ $selectedType->name }}</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-right transition ease-in md:text-lg lg:text-xl">Rp. {{ $selectedType->price }}</h1>
+                @endif
+                @if($selectedKeyswitch != '' && $selectedType != '')
+                <h1 class="font-archivo text-black text-lg text-left transition ease-in md:text-lg lg:text-xl col-span-2">Switch:</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-left transition ease-in md:text-lg lg:text-xl">{{ $selectedKeyswitch->name }}</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-rigth transition ease-in md:text-lg lg:text-xl">Rp. {{ $selectedKeyswitch->price}}x{{ $selectedType->keys }}</h1>
+                @endif
+                @if($selectedKeycaps != '')
+                <h1 class="font-archivo text-black text-lg text-left transition ease-in md:text-lg lg:text-xl col-span-2">Keycaps:</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-left transition ease-in md:text-lg lg:text-xl">{{ $selectedKeycaps->name }}</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-right transition ease-in md:text-lg lg:text-xl">Rp. {{ $selectedKeycaps->price }}</h1>
+                @endif
+                @if($selectedConnection != '')
+                <h1 class="font-archivo text-black text-lg text-left transition ease-in md:text-lg lg:text-xl col-span-2">Connection:</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-left transition ease-in md:text-lg lg:text-xl">{{ $selectedConnection->name }}</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-right transition ease-in md:text-lg lg:text-xl">Rp. {{ $selectedConnection->price }}</h1>
+                @endif
+                @if($selectedAssembly != '')
+                <h1 class="font-archivo text-black text-lg text-left transition ease-in md:text-lg lg:text-xl col-span-2">Assembly:</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-left transition ease-in md:text-lg lg:text-xl">{{ $selectedAssembly->name }}</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-right transition ease-in md:text-lg lg:text-xl">Rp. {{ $selectedAssembly->price }}</h1>
+                @endif
+                <div class="border-t-2 border-black w-full col-span-2"></div>
+                <h1 class="font-archivo text-black text-lg mb-2 text-left transition ease-in md:text-lg lg:text-xl">Total</h1>
+                <h1 class="font-archivo text-black text-lg mb-2 text-right transition ease-in md:text-lg lg:text-xl">Rp. {{ $total }}</h1>
+            </div>
+            <div class="flex items-center mb-4">
+                <input checked id="checked-checkbox" type="checkbox" wire:model="confirmorder" value="true" class="w-4 h-4 text-black bg-black border-gray-black focus:ring-gray-400 focus:ring-1">
+                <label for="checked-checkbox" class="ms-2 text-sm font-medium text-black">Accept Terms & Conditions</label>
+            </div>
+            <div class="w-5/6 flex justify-between items-center md:px-20">
+                <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="previousStep()">BACK</button>
+                <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="orderStep()">PAY</button>
+            </div>
             @elseif($currentStep === 7)
             <h1 class="font-archivo text-black text-lg mb-2 text-center transition ease-in md:text-xl lg:text-2xl">SORRY, CURRENTLY WE'RE ON PROTOTYPE</h1>
             <h1 class="font-archivo text-transparent font-outline-1 text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">GET MORE UPDATES</h1>
             <input type="email" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700 mb-2" placeholder="johndoe@example.com">
             <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl"">SUBSCRIBE</button>
+            @endif
+
+            @if($currentStep !== 1 && $currentStep !== 6 && $currentStep !== 7)
+            <div  class="fixed bottom-0 md:bottom-auto md:right-8 flex flex-col">
+                <div id="items-list" class="bg-[#E8F4FA] -md:hidden md:grid grid-cols-2 p-4 border border-black my-2">
+                    <h1 class="font-archivo text-black text-sm text-center md:mb-2 transition ease-in md:text-md lg:text-md col-span-2">ITEMS</h1>
+                    @if($selectedType != '')
+                    <h1 class="font-archivo text-black text-sm text-left transition ease-in md:text-md lg:text-md col-span-2">Keyboard Type:</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-left transition ease-in md:text-md">{{ $selectedType->name }}</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-right transition ease-in md:text-md">Rp. {{ $selectedType->price }}</h1>
+                    @endif
+                    @if($selectedKeyswitch != '' && $selectedType != '')
+                    <h1 class="font-archivo text-black text-sm text-left transition ease-in md:text-md lg:text-md col-span-2">Switch:</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-left transition ease-in md:text-md">{{ $selectedKeyswitch->name }}</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-rigth transition ease-in md:text-md">Rp. {{ $selectedKeyswitch->price}}x{{ $selectedType->keys }}</h1>
+                    @endif
+                    @if($selectedKeycaps != '')
+                    <h1 class="font-archivo text-black text-sm text-left transition ease-in md:text-lg lg:text-md col-span-2">Keycaps:</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-left transition ease-in md:text-md">{{ $selectedKeycaps->name }}</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-right transition ease-in md:text-,d">Rp. {{ $selectedKeycaps->price }}</h1>
+                    @endif
+                    @if($selectedConnection != '')
+                    <h1 class="font-archivo text-black text-sm text-left transition ease-in md:text-lg lg:text-md col-span-2">Connection:</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-left transition ease-in md:text-md">{{ $selectedConnection->name }}</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-right transition ease-in md:text-md">Rp. {{ $selectedConnection->price }}</h1>
+                    @endif
+                    @if($selectedAssembly != '')
+                    <h1 class="font-archivo text-black text-sm text-left transition ease-in md:text-lg lg:text-md col-span-2">Assembly:</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-left transition ease-in md:text-md">{{ $selectedAssembly->name }}</h1>
+                    <h1 class="font-archivo text-black text-sm mb-2 text-right transition ease-in md:text-md">Rp. {{ $selectedAssembly->price }}</h1>
+                    @endif
+                    @if($total != '')
+                    <div class="border-t-2 border-black w-full col-span-2"></div>
+                    <h1 class="font-archivo text-black text-xs mb-2 text-left transition ease-in md:text-md">Total</h1>
+                    <h1 class="font-archivo text-black text-xs mb-2 text-right transition ease-in md:text-md">Rp. {{ $total }}</h1>
+                    @endif
+                </div>
+                <script>
+                    window.addEventListener('resize', function() {
+                        if (window.innerWidth >= 768) { // 768px is the width for md breakpoint in Tailwind CSS
+                            document.getElementById('items-list').classList.remove('hidden');
+                        } else {
+                            document.getElementById('items-list').classList.add('hidden');
+                        }
+                    });
+
+                    // Check on initial load
+                    if (window.innerWidth >= 768) {
+                        document.getElementById('items-list').classList.remove('hidden');
+                    } else {
+                        document.getElementById('items-list').classList.add('hidden');
+                    }
+                </script>
+                <span class="cursor-pointer mt-1 mx-4 mb-10 block md:hidden">
+                    <h1 name="items" class="font-archivo text-black text-md text-center text-transparent font-outline-1 md:text-md lg:text-md col-span-2 transition ease-in hover:text-black hover:font-outline-none hover:line-through" onclick="ItemsList(this)">SELECED ITEMS</h1>
+                </span>
+            </div>
             @endif
         </form>
     </div>

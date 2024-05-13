@@ -16,6 +16,12 @@
   @vite('resources/css/app.css')
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+      function ItemsList(e) {
+          let list = document.querySelector('#items-list');
+          e.name === 'items' ? (e.name = "closeitems", list.classList.add('md:grid'), list.classList.remove('-md:hidden')) : (e.name = "items", list.classList.add('-md:hidden'), list.classList.remove('md:grid'));
+      }
+  </script>
   <title>{{ $title ?? config('app.name', 'KeeBod') }}</title>
 </head>
 <body class="w-screen h-screen bg-[#E8F4FA]">
