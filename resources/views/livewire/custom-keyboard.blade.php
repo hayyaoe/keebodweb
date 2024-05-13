@@ -213,22 +213,6 @@
                     <h1 class="font-archivo text-black text-xs mb-2 text-right transition ease-in md:text-md">Rp. {{ $total }}</h1>
                     @endif
                 </div>
-                <script>
-                    window.addEventListener('resize', function() {
-                        if (window.innerWidth >= 768) { // 768px is the width for md breakpoint in Tailwind CSS
-                            document.getElementById('items-list').classList.remove('hidden');
-                        } else {
-                            document.getElementById('items-list').classList.add('hidden');
-                        }
-                    });
-
-                    // Check on initial load
-                    if (window.innerWidth >= 768) {
-                        document.getElementById('items-list').classList.remove('hidden');
-                    } else {
-                        document.getElementById('items-list').classList.add('hidden');
-                    }
-                </script>
                 <span class="cursor-pointer mt-1 mx-4 mb-10 block md:hidden">
                     <h1 name="items" class="font-archivo text-black text-md text-center text-transparent font-outline-1 md:text-md lg:text-md col-span-2 transition ease-in hover:text-black hover:font-outline-none hover:line-through" onclick="ItemsList(this)">SELECED ITEMS</h1>
                 </span>
