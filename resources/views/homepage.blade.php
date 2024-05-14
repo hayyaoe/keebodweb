@@ -39,7 +39,7 @@
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
                     alt="office content 2">
             </div>
-            <div class="font-light mt-[-50px]">
+            <div class="mt-10 font-light mt-[-50px]">
                 <p class="font-archivo text-teal-500 text-lg pb-2">About Us</p>
                 <h2 class="mb-4 text-5xl tracking-tight font-extrabold font-archivo">Building a <span
                         class="text-transparent font-outline-1">Keyboard</span> Made Easier</h2>
@@ -153,10 +153,16 @@
                 </div>
             </div>
             <div class="flex flex-wrap">
-                <div class="w-1/2">
-                    <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.606068118739!2d112.62902667479787!3d-7.285581871604548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e0!3m2!1sen!2sid!4v1715500386164!5m2!1sen!2sid" width="600" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="mx-auto md:w-2/3 lg:w-1/2">
+                
+                <div class="w-full lg:w-1/2 lg:pr-4">
+                    <div class="relative" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                      <iframe class="absolute top-0 left-0 w-full h-full border-0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.606068118739!2d112.62902667479787!3d-7.285581871604548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e0!3m2!1sen!2sid!4v1715500386164!5m2!1sen!2sid"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+
+                <div class="mx-auto md:w-2/3 lg:w-1/2 mt-10 lg:mt-0">
                     <div class="-m-2 flex flex-wrap text-black">
                         <div class="w-1/2 p-2">
                             <div class="relative">
@@ -206,7 +212,7 @@
                             <div class="text-outline-1 italic">BOD</div>
                         </a>
                     </span>
-                    <p class="w-[400px] text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nihil quam ab accusantium natus impedit officia cupiditate architecto asperiores veritatis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, sint!</p>
+                    <p class="w-full lg:w-[400px] text-gray-400 mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nihil quam ab accusantium natus impedit officia cupiditate architecto asperiores veritatis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, sint!</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-3">
