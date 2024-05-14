@@ -22,16 +22,21 @@
             <div class="w-full flex flex-col items-center mb-6">
                 <h1 class="font-archivo text-black text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">SELECT KEYBOARD TYPE</h1>
                 <div class="flex space-x-2">
+                    <ul class="w-full flex flex-row gap-1">
                     @foreach($typesAvailable as $type)
-                    <input type="radio" id="{{ $type->name }}" wire:model="type_id" value="{{ $type->id }}" class="hidden" required />
-                    <label for="{{ $type->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
+                    <li>
+                    <input type="radio" id="{{ $type->name }}" wire:model="type_id" value="{{ $type->id }}" class="hidden peer sr-only" required />
+                    <label for="{{ $type->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 hover:text-black peer-checked:text-black peer-checked:line-through">
                         <img src="{{ asset('images/60icon.png')}}">
                         <div class="block">
-                            <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">{{ $type->name }}</div>
+                            <div class="text-lg font-archivo md:text-xl lg:text-2xl">{{ $type->name }}</div>
                         </div>
                     </label>
+                    </li>
                     @endforeach
+                    </ul>
                 </div>
+                <div class="font-archivo text-red-600">@error('type_id') REQUIRED SELECT TYPE @enderror</div>
             </div>
             <div class="w-5/6 flex justify-end md:px-20">
                 <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="switchStep()">NEXT</button>
@@ -46,15 +51,18 @@
             <div class="w-full flex flex-col items-center mb-6">
                 <h1 class="font-archivo text-black text-lg mb-2 transition ease-in md:text-xl lg:text-2xl ">SELECT SWITCH</h1>
                 <div class="flex space-x-2">
+                    <ul class="w-full flex flex-row gap-1">
                     @foreach($switchesAvailable as $switchy)
-                    <input type="radio" id="{{ $switchy->name }}" wire:model="keyswitch_id" value="{{ $switchy->id }}" class="hidden" required />
-                    <label for="{{ $switchy->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
-                        <div class="block">
-                            <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">{{ $switchy->name }}</div>
-                        </div>
-                    </label>
+                    <li>
+                        <input type="radio" id="{{ $switchy->name }}"  wire:model="keyswitch_id" value="{{ $switchy->id }}" class="hidden peer" name="switches" required />
+                        <label for="{{ $switchy->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                            {{ $switchy->name }}
+                        </label>
+                    <li>
                     @endforeach
+                    </ul>
                 </div>
+                <div class="font-archivo text-red-600">@error('keyswitch_id') REQUIRED SELECT SWITCH @enderror</div>
             </div>
             <div class="w-5/6 flex justify-between items-center md:px-20">
                 <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="previousStep()">BACK</button>
@@ -70,15 +78,18 @@
             <div class="w-full flex flex-col items-center mb-6">
                 <h1 class="font-archivo text-black text-lg mb-2 transition ease-in md:text-xl lg:text-2xl ">SELECT KEYCAPS</h1>
                 <div class="flex space-x-2">
+                    <ul class="w-full flex flex-row gap-1">
                     @foreach($keycapsAvailable as $keycap)
-                    <input type="radio" id="{{ $keycap->name }}" wire:model="keycap_id" value="{{ $keycap->id }}" class="hidden" required />
-                    <label for="{{ $keycap->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
-                        <div class="block">
-                            <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">{{ $keycap->name }}</div>
-                        </div>
-                    </label>
+                    <li>
+                        <input type="radio" id="{{ $keycap->name }}" wire:model="keycap_id" value="{{ $keycap->id }}" class="hidden peer" name="keycap" required />
+                        <label for="{{ $keycap->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                            {{ $keycap->name }}
+                        </label>
+                    <li>
                     @endforeach
+                    </ul>
                 </div>
+                <div class="font-archivo text-red-600">@error('keycap_id') REQUIRED SELECT KEYCAPS @enderror</div>
             </div>
             <div class="w-5/6 flex justify-between items-center md:px-20">
                 <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="previousStep()">BACK</button>
@@ -94,15 +105,18 @@
             <div class="w-full flex flex-col items-center mb-6">
                 <h1 class="font-archivo text-black text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">SELECT CONNECTION</h1>
                 <div class="flex space-x-2">
+                    <ul class="w-full flex flex-row gap-1">
                      @foreach($connectionsAvailable as $connection)
-                    <input type="radio" id="{{ $connection->name }}" wire:model="connection_id" value="{{ $connection->id }}" class="hidden" required />
-                    <label for="{{ $connection->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
-                        <div class="block">
-                            <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">{{ $connection->name }}</div>
-                        </div>
-                    </label>
+                     <li>
+                        <input type="radio" id="{{ $connection->name }}" wire:model="connection_id" value="{{ $connection->id }}" class="hidden peer" name="connection" required />
+                        <label for="{{ $connection->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                            {{ $connection->name }}
+                        </label>
+                     </li>
                     @endforeach
+                    </ul>
                 </div>
+                <div class="font-archivo text-red-600">@error('connection_id') REQUIRED SELECT CONNECTION @enderror</div>
             </div>
             <div class="w-5/6 flex justify-between items-center md:px-20">
                 <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="previousStep()">BACK</button>
@@ -118,15 +132,18 @@
             <div class="w-full flex flex-col items-center mb-6">
                 <h1 class="font-archivo text-black text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">SELECT ASSEMBLY</h1>
                 <div class="flex space-x-2">
+                    <ul class="w-full flex flex-row gap-1">
                     @foreach($assembliesAvailable as $assembly)
-                    <input type="radio" id="{{ $assembly->name }}" wire:model="assembly_id" value="{{ $assembly->id }}" class="hidden" required />
-                    <label for="{{ $assembly->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700">
-                        <div class="block">
-                            <div class="text-lg font-archivo text-transparent font-outline-1 hover:text-black md:text-xl lg:text-2xl">{{ $assembly->name }}</div>
-                        </div>
+                    <li>
+                    <input type="radio" id="{{ $assembly->name }}" wire:model="assembly_id" value="{{ $assembly->id }}" class="hidden peer" name="assembly" required />
+                    <label for="{{ $assembly->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                        {{ $assembly->name }}
                     </label>
+                    </li>
                     @endforeach
+                    </ul>
                 </div>
+                <div class="font-archivo text-red-600">@error('assembly_id') REQUIRED SELECT ASSEMBLY @enderror</div>
             </div>
             <div class="w-5/6 flex justify-between items-center md:px-20">
                 <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="previousStep()">BACK</button>
@@ -174,7 +191,7 @@
             </div>
             @elseif($currentStep === 7)
             <h1 class="font-archivo text-black text-lg mb-2 text-center transition ease-in md:text-xl lg:text-2xl">SORRY, CURRENTLY WE'RE ON PROTOTYPE</h1>
-            <h1 class="font-archivo text-transparent font-outline-1 text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">GET MORE UPDATES</h1>
+            <h1 class="font-archivo text-black text-lg mb-2 transition ease-in md:text-xl lg:text-2xl">SUBSCRIBE TO GET MORE UPDATES</h1>
             <input type="email" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer hover:text-gray-700 mb-2" wire:model="email" placeholder="johndoe@example.com">
             <button class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl" wire:click="subscribe()">SUBSCRIBE</button>
             @endif

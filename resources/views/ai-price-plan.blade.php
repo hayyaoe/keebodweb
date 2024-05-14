@@ -1,4 +1,4 @@
-Ka@extends('layouts/app')
+@extends('layouts/app')
 
 @section("body")
 @include("components/topbar")

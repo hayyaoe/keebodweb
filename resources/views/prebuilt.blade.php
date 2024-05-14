@@ -88,47 +88,59 @@
 
                     <h1 class="mt-6 font-archivo text-2xl xl:text-xl 2xl:text-2xl">SWITCH</h1>
 
-                    <div class="mt-2 flex flex-wrap">
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            CHERRY RED
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            ALPACCA
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            BOBA U4T
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            CS AIR
-                        </p>
-                    </div>
+                        <ul class="mt-2 flex flex-wrap gap-1">
+                        <li>
+                            <input type="radio" id="CHERRYRED" value="CHERRY RED" class="hidden peer" name="switches" required />
+                            <label for="CHERRYRED" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                CHERRY RED
+                            </label>
+                        <li>
+                        <li>
+                            <input type="radio" id="ALPACCA" value="ALPACCA" class="hidden peer" name="switches" required />
+                            <label for="ALPACCA" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                ALPACCA
+                            </label>
+                        <li>
+                        <li>
+                            <input type="radio" id="BOBA U4T" value="BOBAU4T" class="hidden peer" name="switches" required />
+                            <label for="BOBA U4T" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                BOBA U4T
+                            </label>
+                        <li>
+                        <li>
+                            <input type="radio" id="CSAIR" value="CSAIR" class="hidden peer" name="switches" required />
+                            <label for="CSAIR" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                AKKO CS AIR
+                            </label>
+                        <li>
+                        </ul>
 
                     <h1 class="mt-6 font-archivo text-2xl xl:text-xl 2xl:text-2xl">CASE</h1>
-                    <div class="mt-2 flex flex-wrap">
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            CLEAR
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            BLUE
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            BLACK MATTE
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            BLACK GLOSS
-                        </p>
-                        <p
-                            class="mr-2 mb-2 bg-transparent hover:bg-gray-300 font-archivo text-gray-800 font-semibold py-2 px-4 border border-black">
-                            PATINA
-                        </p>
+                    <ul class="mt-2 flex flex-wrap gap-1">
+                        <li>
+                            <input type="radio" id="BLUE" value="BLUE" class="hidden peer" name="case" required />
+                            <label for="BLUE" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                BLUE
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="BLACKMATTE" value="BLACKMATTE" class="hidden peer" name="case" required />
+                            <label for="BLACKMATTE" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                BLACK MATTE
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="BLACKGLOSS" value="BLACKGLOSS" class="hidden peer" name="case" required />
+                            <label for="BLACKGLOSS" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                BLACK GLOSS
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="PATINA" value="PATINA" class="hidden peer" name="case" required />
+                            <label for="PATINA" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
+                                BLUE
+                            </label>
+                        </li>
                     </div>
 
                      <a href="{{ route('subscribe') }}">
