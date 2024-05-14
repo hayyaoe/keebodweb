@@ -7,7 +7,7 @@
             <a href="/prebuilt"><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl">LATEST PREBUILT</h5></a>
         </li>
         <li class="m-4">
-            <a href="{{ url('/ai-price-plan ') }}"><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl">AI SUGGESTION</h5></a>
+            <a href="{{ route('ai-suggestion') }}"><h5 class="font-archivo text-transparent font-outline-1 text-lg transition ease-in hover:text-black hover:font-outline-none hover:line-through md:text-xl lg:text-2xl xl:text-3xl">AI SUGGESTION</h5></a>
         </li>
     </ul>
 </nav>

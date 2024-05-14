@@ -3,24 +3,57 @@
 namespace App\Livewire;
 
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
+
+use App\Models\Assembly;
+use App\Models\Connection;
+use App\Models\CustomOrder;
+use App\Models\Keycap;
+use App\Models\KeySwitch;
+use App\Models\Type;
+use App\Models\Subscribe;
+
+use function Laravel\Prompts\confirm;
 
 #[Layout("layouts.livewirelayout")]
 #[Title("Custom KeeBod")]
 class CustomKeyboard extends Component
 {
     public $currentStep = 1;
-    public $totalSteps = 11;
-    public $type;
-    public $case_material;
-    public $switch;
-    public $keycaps;
-    public $accent_keycaps;
-    public $switch_lubrication;
-    public $stabilizers;
-    public $connection;
-    public $mounting_type;
-    public $assembly;
+    public $totalSteps = 7;
+    public $user_id = 1;
+    public $type_id;
+    public $keyswitch_id;
+    public $keycap_id;
+    public $connection_id;
+    public $assembly_id;
+
+    public $selectedType;
+    public $selectedKeyswitch;
+    public $selectedKeycaps;
+    public $selectedConnection;
+    public $selectedAssembly;
+
+    public $typesAvailable;
+    public $switchesAvailable;
+    public $keycapsAvailable;
+    public $connectionsAvailable;
+    public $assembliesAvailable;
+
+    public $confirmorder;
+    public $total;
+
+    public $email;
+
+    public function mount()
+    {
+        $this->assembliesAvailable = Assembly::all();
+        $this->switchesAvailable = KeySwitch::all();
+        $this->keycapsAvailable = Keycap::all();
+        $this->connectionsAvailable = Connection::all();
+        $this->typesAvailable = Type::all();
+    }
 
     public function render()
     {
@@ -29,96 +62,101 @@ class CustomKeyboard extends Component
 
     public function previousStep()
     {
+        $this->confirmorder = null;
         $this->currentStep--;
     }
 
-    public function caseMaterial()
+    public function switchStep()
     {
-        // $this->validate([
-        //     "type" => "required",
-        // ]);
+        $this->validate([
+            "type_id" => "required",
+        ]);
+
+        $this->selectedType = Type::findOrFail($this->type_id);
 
         $this->currentStep = 2;
     }
 
-    public function switch()
+    public function keycapsStep()
     {
-        // $this->validate([
-        //     "case_material" => "required",
-        // ]);
+        $this->validate([
+            "keyswitch_id" => "required",
+        ]);
+
+        $this->selectedKeyswitch = KeySwitch::findOrFail($this->keyswitch_id);
 
         $this->currentStep = 3;
     }
 
-    public function keycaps()
+    public function connectionStep()
     {
-        // $this->validate([
-        //     "switch" => "required",
-        // ]);
+        $this->validate([
+            "keycap_id" => "required",
+        ]);
+
+        $this->selectedKeycaps = Keycap::findOrFail($this->keycap_id);
 
         $this->currentStep = 4;
     }
 
-    public function accentKeycaps()
+    public function assemblyStep()
     {
-        // $this->validate([
-        //     "keycaps" => "required",
-        // ]);
+        $this->validate([
+            "connection_id" => "required",
+        ]);
+
+        $this->selectedConnection = Connection::findOrFail(
+            $this->connection_id
+        );
 
         $this->currentStep = 5;
     }
 
-    public function switch_lubrication()
+    public function orderDetailStep()
     {
-        // $this->validate([
-        //     "accent_keycaps" => "required",
-        // ]);
+        $this->validate([
+            "assembly_id" => "required",
+        ]);
+
+        $this->selectedAssembly = Assembly::findOrFail($this->assembly_id);
+
+        $this->total =
+            $this->selectedAssembly->price +
+            $this->selectedConnection->price +
+            $this->selectedKeycaps->price +
+            $this->selectedKeyswitch->price * $this->selectedType->keys +
+            $this->selectedType->price;
 
         $this->currentStep = 6;
     }
 
-    public function stabilizers()
+    public function orderStep()
     {
-        // $this->validate([
-        //     "switch_lubrication" => "required",
-        // ]);
+        $this->validate([
+            "confirmorder" => "required",
+        ]);
 
+        $data = $this->validate([
+            "user_id" => "required",
+            "type_id" => "required",
+            "assembly_id" => "required",
+            "keyswitch_id" => "required",
+            "keycap_id" => "required",
+            "connection_id" => "required",
+        ]);
+
+        CustomOrder::create($data);
         $this->currentStep = 7;
     }
 
-    public function connection()
+    public function subscribe()
     {
-        // $this->validate([
-        //     "stabilizers" => "required",
-        // ]);
+        $data = $this->validate([
+            "email" => "required|email",
+        ]);
 
-        $this->currentStep = 8;
-    }
+        redirect()->route("home");
 
-    public function mountingType()
-    {
-        // $this->validate([
-        //     "connection" => "required",
-        // ]);
-
-        $this->currentStep = 9;
-    }
-
-    public function assembly()
-    {
-        // $this->validate([
-        //     "mounting_type" => "required",
-        // ]);
-
-        $this->currentStep = 10;
-    }
-
-    public function order()
-    {
-        // $this->validate([
-        //     "assembly" => "required",
-        // ]);
-
-        $this->currentStep = 11;
+        Subscribe::create($data);
     }
 }
