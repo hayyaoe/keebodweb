@@ -12,6 +12,7 @@ use App\Models\CustomOrder;
 use App\Models\Keycap;
 use App\Models\KeySwitch;
 use App\Models\Type;
+use App\Models\CaseType;
 use App\Models\Subscribe;
 
 use function Laravel\Prompts\confirm;
@@ -21,21 +22,24 @@ use function Laravel\Prompts\confirm;
 class CustomKeyboard extends Component
 {
     public $currentStep = 1;
-    public $totalSteps = 7;
+    public $totalSteps = 8;
     public $user_id = 1;
     public $type_id;
+    public $case_type_id;
     public $keyswitch_id;
     public $keycap_id;
     public $connection_id;
     public $assembly_id;
 
     public $selectedType;
+    public $selectedCaseType;
     public $selectedKeyswitch;
     public $selectedKeycaps;
     public $selectedConnection;
     public $selectedAssembly;
 
     public $typesAvailable;
+    public $caseTypesAvailable;
     public $switchesAvailable;
     public $keycapsAvailable;
     public $connectionsAvailable;
@@ -53,6 +57,7 @@ class CustomKeyboard extends Component
         $this->keycapsAvailable = Keycap::all();
         $this->connectionsAvailable = Connection::all();
         $this->typesAvailable = Type::all();
+        $this->caseTypesAvailable = CaseType::all();
     }
 
     public function render()
@@ -66,7 +71,7 @@ class CustomKeyboard extends Component
         $this->currentStep--;
     }
 
-    public function switchStep()
+    public function caseTypeStep()
     {
         $this->validate([
             "type_id" => "required",
@@ -77,6 +82,17 @@ class CustomKeyboard extends Component
         $this->currentStep = 2;
     }
 
+    public function switchStep()
+    {
+        $this->validate([
+            "case_type_id" => "required",
+        ]);
+
+        $this->selectedCaseType = CaseType::findOrFail($this->case_type_id);
+
+        $this->currentStep = 3;
+    }
+
     public function keycapsStep()
     {
         $this->validate([
@@ -85,7 +101,7 @@ class CustomKeyboard extends Component
 
         $this->selectedKeyswitch = KeySwitch::findOrFail($this->keyswitch_id);
 
-        $this->currentStep = 3;
+        $this->currentStep = 4;
     }
 
     public function connectionStep()
@@ -96,7 +112,7 @@ class CustomKeyboard extends Component
 
         $this->selectedKeycaps = Keycap::findOrFail($this->keycap_id);
 
-        $this->currentStep = 4;
+        $this->currentStep = 5;
     }
 
     public function assemblyStep()
@@ -109,7 +125,7 @@ class CustomKeyboard extends Component
             $this->connection_id
         );
 
-        $this->currentStep = 5;
+        $this->currentStep = 6;
     }
 
     public function orderDetailStep()
@@ -125,9 +141,10 @@ class CustomKeyboard extends Component
             $this->selectedConnection->price +
             $this->selectedKeycaps->price +
             $this->selectedKeyswitch->price * $this->selectedType->keys +
-            $this->selectedType->price;
+            $this->selectedType->price +
+            $this->selectedCaseType->price;
 
-        $this->currentStep = 6;
+        $this->currentStep = 7;
     }
 
     public function orderStep()
@@ -143,10 +160,11 @@ class CustomKeyboard extends Component
             "keyswitch_id" => "required",
             "keycap_id" => "required",
             "connection_id" => "required",
+            "case_type_id" => "required",
         ]);
 
         CustomOrder::create($data);
-        $this->currentStep = 7;
+        $this->currentStep = 8;
     }
 
     public function subscribe()
@@ -158,5 +176,20 @@ class CustomKeyboard extends Component
         redirect()->route("home");
 
         Subscribe::create($data);
+    }
+
+    public function selectCaseType()
+    {
+        $this->selectedCaseType = CaseType::findOrFail($this->case_type_id);
+    }
+
+    public function selectSwitch()
+    {
+        $this->selectedKeyswitch = KeySwitch::findOrFail($this->keyswitch_id);
+    }
+
+    public function selectKeycaps()
+    {
+        $this->selectedKeycaps = Keycap::findOrFail($this->keycap_id);
     }
 }

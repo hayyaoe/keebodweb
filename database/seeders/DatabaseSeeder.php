@@ -18,9 +18,9 @@ class DatabaseSeeder extends Seeder
 
         $data = [
             [
-                "name" => "60%",
-                "price" => 3000000,
-                "keys" => 61,
+                "name" => "40%",
+                "price" => 300000,
+                "keys" => 41,
                 "available" => true,
             ],
         ];

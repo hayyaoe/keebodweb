@@ -29,5 +29,7 @@
 </head>
 <body class="bg-[#E8F4FA]">
     @yield('body')
+
+    <livewire:scripts />
 </body>
 </html>
