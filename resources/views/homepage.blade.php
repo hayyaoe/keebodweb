@@ -39,6 +39,7 @@
                     src="{{ asset('images/KeyboardImage2.JPG') }}"
                     alt="office content 2">
             </div>
+
             <div class="font-light pt-2">
                 <p class="font-archivo text-teal-500 text-lg pb-2">About Us</p>
                 <h2 class="mb-4 text-5xl tracking-tight font-extrabold font-archivo">Building a <span
