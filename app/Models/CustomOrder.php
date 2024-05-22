@@ -12,6 +12,7 @@ use App\Models\Connection;
 use App\Models\Keycap;
 use App\Models\KeySwitch;
 use App\Models\Type;
+use App\Models\CaseType;
 
 class CustomOrder extends Model
 {
@@ -47,5 +48,10 @@ class CustomOrder extends Model
     public function assembly()
     {
         return $this->hasOne(Assembly::class);
+    }
+
+    public function caseType()
+    {
+        return $this->hasOne(CaseType::class);
     }
 }

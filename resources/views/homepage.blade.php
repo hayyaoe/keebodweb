@@ -11,7 +11,7 @@
                 <h1
                     class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl xl:text-7xl font-archivo">
                     Build Your Dream <span class="text-transparent font-outline-1">Keyboard</span></h1>
-                <p class="max-w-2xl mb-6 font-normal text-gray-700 lg:mb-8 md:text-lg lg:text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa officia sint nostrum est soluta quisquam quidem neque, perferendis dolore nihil..</p>
+                <p class="max-w-2xl mb-6 font-normal text-gray-700 lg:mb-8 md:text-lg lg:text-xl">Enter a realm where your imagination dictates everything and your keyboard becomes a masterpiece. Welcome to our specialized keyboard experience, where customization knows no bounds and satisfaction is guaranteed</p>
                 <a href="{{ route('custom-keyboard') }}"
                     class="inline-flex items-center bg-teal-400 justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-primary-700 hover:bg-teal-500 focus:ring-4 focus:ring-teal-800 dark:focus:ring-primary-900">
                     Custom Now
@@ -33,17 +33,18 @@
 
             <div class="grid grid-cols-2 gap-4 mt-8">
                 <img class="w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+                    src="{{ asset('images/KeyboardImage.JPG') }}"
                     alt="office content 1">
                 <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+                    src="{{ asset('images/KeyboardImage2.JPG') }}"
                     alt="office content 2">
             </div>
-            <div class="mt-10 font-light mt-[-50px]">
+
+            <div class="font-light pt-2">
                 <p class="font-archivo text-teal-500 text-lg pb-2">About Us</p>
                 <h2 class="mb-4 text-5xl tracking-tight font-extrabold font-archivo">Building a <span
                         class="text-transparent font-outline-1">Keyboard</span> Made Easier</h2>
-                <p class="mb-4 text-lg font-normal text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt minima ipsam amet architecto? Adipisci delectus itaque aliquam. Autem dolorum quia maxime eveniet ad impedit delectus reprehenderit ullam nobis architecto. Eum recusandae asperiores exercitationem adipisci doloremque praesentium sapiente totam possimus architecto, aperiam, illum obcaecati ipsa porro quidem nam magnam ex consectetur facere nisi quos ea? Quaerat provident fugit dolor incidunt molestias.</p>
+                <p class="mb-4 text-lg font-normal text-gray-700">From routine maintenance to intricate repairs, our team of skilled artisans is dedicated to keeping your keyboard performing at its peak.our customizable keyboards and comprehensive service offerings are designed to elevate your satisfaction to new heights.</p>
                 <a href="{{ route('prebuilt') }}"
                     class="inline-flex items-center bg-teal-400 justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-primary-700 hover:bg-teal-500 focus:ring-4 focus:ring-teal-800 dark:focus:ring-primary-900">
                     Check Pre-Built
@@ -63,7 +64,7 @@
                 <p class="font-archivo text-teal-500 text-lg pb-2">Our Services</p>
                 <h2 class="font-archivo mb-4 text-5xl tracking-tight text-gray-90d">Your <span
                         class="text-transparent font-outline-1">Keyboard</span> is Our Priority</h2>
-                <p class="font-normal text-gray-700 sm:text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. sint quisquam aspernatur corrupti iste, obcaecati consectetur hic.</p>
+                <p class="font-normal text-gray-700 sm:text-xl">Experience the epitome of personalization. Experience our keyboard boutique today, where your vision becomes reality, and your keyboard becomes art.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0">
                 <div class="hover:bg-teal-200 p-4 rounded-lg transition duration-300">
@@ -141,63 +142,23 @@
 
         <div class="container mx-auto px-5 py-24">
 
-            <div class="w-full px-4">
+            <div class="w-full pt-4">
                 <div class="max-w-3xl mx-auto text-center mb-16">
                     <h4 class="font-bold text-lg  font-archivo text-teal-400 mb-2 uppercase">Contact</h4>
                     <h2 class="font-bold font-archivo text-4xl mb-4 lg:text-4xl">Contact <span
                         class="text-transparent font-outline-1">Us</span></h2>
-                    <p class="font-normal text-gray-700 sm:text-xl">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Atque accusamus odio tenetur dolores porro facilis ullam
-                        corrupti
-                        enim consectetur. Recusandae!</p>
+                    <p class="font-normal text-gray-700 sm:text-xl">Seeking assistance with a product, looking for more information about our services, or simply want to share your feedback, our dedicated team is here to help.</p>
                 </div>
             </div>
             <div class="flex flex-wrap">
-                
-                <div class="w-full lg:w-1/2 lg:pr-4">
-                    <div class="relative" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                      <iframe class="absolute top-0 left-0 w-full h-full border-0"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.606068118739!2d112.62902667479787!3d-7.285581871604548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e0!3m2!1sen!2sid!4v1715500386164!5m2!1sen!2sid"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="w-full lg:w-1/2 lg:pr-4 mb-4">
+                      <div class="relative" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe class="absolute top-0 left-0 w-full h-full border-0"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.606068118739!2d112.62902667479787!3d-7.285581871604548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e0!3m2!1sen!2sid!4v1715500386164!5m2!1sen!2sid"
+                          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
                     </div>
-                  </div>
-
-                <div class="mx-auto md:w-2/3 lg:w-1/2 mt-10 lg:mt-0">
-                    <div class="-m-2 flex flex-wrap text-black">
-                        <div class="w-1/2 p-2">
-                            <div class="relative">
-                                <input type="text" id="name" name="name"
-                                    class="peer w-full rounded border border-gray-400 bg-white bg-opacity-40 py-1 px-3 text-base leading-8 text-black placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-teal-400 focus:bg-white focus:ring-2"
-                                    placeholder="Name" />
-                                <label for="name"
-                                    class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-teal-400 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-teal-400 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-teal-500">Name</label>
-                            </div>
-                        </div>
-                        <div class="w-1/2 p-2">
-                            <div class="relative">
-                                <input type="text" id="email" name="email"
-                                    class="peer w-full rounded border border-gray-400 bg-white bg-opacity-40 py-1 px-3 text-base leading-8 text-black placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-teal-400 focus:bg-white focus:ring-2"
-                                    placeholder="Email" />
-                                <label for="email"
-                                    class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-teal-400 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-teal-400 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-teal-500">Email</label>
-                            </div>
-                        </div>
-                        <div class="mt-4 w-full p-2">
-                            <div class="relative">
-                                <textarea type="text" id="email" name="email"
-                                    class="peer w-full h-60 rounded border border-gray-400 bg-white bg-opacity-40 py-1 px-3 text-base leading-8 text-black placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-teal-400 focus:bg-white focus:ring-2"
-                                    placeholder="Email"></textarea>
-                                <label for="email"
-                                    class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-teal-400 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-teal-400 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-teal-500">Message</label>
-                            </div>
-                        </div>
-
-                        <div class="w-full p-2">
-                            <button
-                                class="w-full mx-auto rounded border border-teal-400 bg-teal-400 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-teal-400 focus:outline-none focus:ring active:text-indigo-00">Button</button>
-                        </div>
-                    </div>
-                </div>
+                <livewire:suggestion />
             </div>
         </div>
     </section>
@@ -212,7 +173,6 @@
                             <div class="text-outline-1 italic">BOD</div>
                         </a>
                     </span>
-                    <p class="w-full lg:w-[400px] text-gray-400 mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nihil quam ab accusantium natus impedit officia cupiditate architecto asperiores veritatis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, sint!</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-3">
@@ -220,16 +180,16 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Menu</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
-                                <a href="" class="hover:underline ">Part Store</a>
+                                <a href="/" class="hover:underline ">Part Store</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="hover:underline">AI Sugesstion</a>
+                                <a href="{{ route('ai-suggestion') }}" class="hover:underline">AI Sugesstion</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="hover:underline">Latest Prebuilt</a>
+                                <a href="{{ route('prebuilt') }}" class="hover:underline">Latest Prebuilt</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="hover:underline">Keyboard Customization</a>
+                                <a href="{{ route('custom-keyboard') }}" class="hover:underline">Keyboard Customization</a>
                             </li>
                         </ul>
                     </div>
@@ -237,10 +197,10 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                <a href="/" class="hover:underline ">Github</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                <a href="/" class="hover:underline">Discord</a>
                             </li>
                         </ul>
                     </div>
