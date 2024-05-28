@@ -8,7 +8,7 @@
 				</a>
 			</span>
 		</div>
-	
+
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-gray-900 p-3">
 				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -17,35 +17,26 @@
 				</svg>
 			</button>
 		</div>
-	
+
 		<ul class="hidden lg:flex lg:mx-auto lg:items-center lg:space-x-2">
 			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="{{ route('custom-keyboard') }}">Custom Keyboard</a></li>
 			<li class="text-gray-300">|</li>
-			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="#">Keyboard Repair</a></li>
+			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="{{ route('coming-soon') }}">Keyboard Repair</a></li>
 			<li class="text-gray-300">|</li>
-			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="#">Keyboard Mod</a></li>
+			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="{{ route('coming-soon') }}">Keyboard Mod</a></li>
 			<li class="text-gray-300">|</li>
-			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="#">Parts Store</a></li>
+			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="{{ route('coming-soon') }}">Parts Store</a></li>
 			<li class="text-gray-300">|</li>
 			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="{{ route('ai-suggestion') }}">AI Suggestion</a></li>
 			<li class="text-gray-300">|</li>
 			<li><a class="text-sm text-gray-400 hover:text-teal-700" href="{{ route('prebuilt') }}">Latest Prebuilt</a></li>
 		</ul>
-	
-		<div class="hidden lg:flex pr-8 font-archivo text-xl items-center">
-			<div class="flex gap-2">
-				<a href="/">
-					<p class="font-outline-1 text-transparent">ID</p>
-				</a>
-				<a href="/">
-					<p>US</p>
-				</a>
-			</div>
-		</div>
-	
+
+
 		<div class="hidden lg:flex items-center space-x-4">
 			<ul class="flex items-center space-x-4">
 				@auth
+					<li><a class="font-archivo text-xl" href="{{ route('cart') }}">CART</a></li>
 					<li>
 						<livewire:logout />
 					</li>
@@ -56,7 +47,7 @@
 			</ul>
 		</div>
 	</nav>
-	
+
     <div class="navbar-menu relative z-50 hidden">
         <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
         <nav

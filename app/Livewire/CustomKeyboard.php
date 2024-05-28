@@ -54,7 +54,12 @@ class CustomKeyboard extends Component
 
     public function mount()
     {
-        $this->user_id = Auth::user()->id;
+        if (!empty(Auth::user()->id)) {
+            $this->user_id = Auth::user()->id;
+        } else {
+            $this->user_id = 1;
+        }
+
         $this->assembliesAvailable = Assembly::all();
         $this->switchesAvailable = KeySwitch::all();
         $this->keycapsAvailable = Keycap::all();

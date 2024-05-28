@@ -56,7 +56,7 @@
                 <div class="flex space-x-2">
                     <ul class="w-full flex flex-row gap-1">
                     @foreach($typesAvailable as $type)
-                    <li>
+                    <li class="group relative">
                     <input type="radio" id="{{ $type->name }}" wire:model="type_id" value="{{ $type->id }}" class="hidden peer sr-only" required />
                     <label for="{{ $type->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 hover:text-black peer-checked:text-black peer-checked:line-through">
                         <img src="{{ asset('images/60icon.png')}}">
@@ -64,6 +64,9 @@
                             <div class="text-lg font-archivo md:text-xl lg:text-2xl">{{ $type->name }}</div>
                         </div>
                     </label>
+                    <div class="absolute left-0 mt-2 w-40 p-2 bg-white border border-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p>{{ $type->description }}</p>
+                    </div>
                     </li>
                     @endforeach
                     </ul>
@@ -79,13 +82,16 @@
                 <div class="flex space-x-2">
                     <ul class="w-full flex flex-row gap-1">
                     @foreach($caseTypesAvailable as $caseType)
-                    <li>
+                    <li  class="group relative">
                     <input type="radio" id="{{ $caseType->name }}" wire:model="case_type_id" value="{{ $caseType->id }}" class="hidden peer sr-only" required />
                     <label for="{{ $caseType->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 hover:text-black peer-checked:text-black peer-checked:line-through" wire:click="selectCaseType()">
                         <div class="block">
                             <div class="text-lg font-archivo md:text-xl lg:text-2xl">{{ $caseType->name }}</div>
                         </div>
                     </label>
+                    <div class="absolute left-0 mt-2 w-40 p-2 bg-white border border-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p>{{ $caseType->description }}</p>
+                    </div>
                     </li>
                     @endforeach
                     </ul>
@@ -102,11 +108,14 @@
                 <div class="flex space-x-2">
                     <ul class="w-full flex flex-row gap-1">
                     @foreach($switchesAvailable as $switchy)
-                    <li>
+                    <li class="group relative">
                         <input type="radio" id="{{ $switchy->name }}"  wire:model="keyswitch_id" value="{{ $switchy->id }}" class="hidden peer" name="switches" required />
                         <label for="{{ $switchy->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through" wire:click="selectSwitch()">
                             {{ $switchy->name }}
                         </label>
+                        <div class="absolute left-0 mt-2 w-40 p-2 bg-white border border-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p>{{ $switchy->description }}</p>
+                        </div>
                     <li>
                     @endforeach
                     </ul>
@@ -123,11 +132,14 @@
                 <div class="flex space-x-2">
                     <ul class="w-full flex flex-row gap-1">
                     @foreach($keycapsAvailable as $keycap)
-                    <li>
+                    <li class="group relative">
                         <input type="radio" id="{{ $keycap->name }}" wire:model="keycap_id" value="{{ $keycap->id }}" class="hidden peer" name="keycap" required />
                         <label for="{{ $keycap->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through " wire:click="selectKeycaps()">
                             {{ $keycap->name }}
                         </label>
+                        <div class="absolute left-0 mt-2 w-40 p-2 bg-white border border-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p>{{ $keycap->description }}</p>
+                        </div>
                     <li>
                     @endforeach
                     </ul>
@@ -144,11 +156,14 @@
                 <div class="flex space-x-2">
                     <ul class="w-full flex flex-row gap-1">
                      @foreach($connectionsAvailable as $connection)
-                     <li>
+                     <li class="group relative">
                         <input type="radio" id="{{ $connection->name }}" wire:model="connection_id" value="{{ $connection->id }}" class="hidden peer" name="connection" required />
                         <label for="{{ $connection->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
                             {{ $connection->name }}
                         </label>
+                        <div class="absolute left-0 mt-2 w-40 p-2 bg-white border border-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p>{{ $connection->description }}</p>
+                        </div>
                      </li>
                     @endforeach
                     </ul>
@@ -165,11 +180,14 @@
                 <div class="flex space-x-2">
                     <ul class="w-full flex flex-row gap-1">
                     @foreach($assembliesAvailable as $assembly)
-                    <li>
+                    <li class="group relative">
                     <input type="radio" id="{{ $assembly->name }}" wire:model="assembly_id" value="{{ $assembly->id }}" class="hidden peer" name="assembly" required />
                     <label for="{{ $assembly->name }}" class="inline-flex items-center justify-between p-2 border border-black cursor-pointer text-transparent font-outline-1 text-lg font-archivo md:text-xl lg:text-2xl hover:text-black peer-checked:text-black peer-checked:line-through">
                         {{ $assembly->name }}
                     </label>
+                    <div class="absolute left-0 mt-2 w-40 p-2 bg-white border border-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p>{{ $assembly->description }}</p>
+                    </div>
                     </li>
                     @endforeach
                     </ul>

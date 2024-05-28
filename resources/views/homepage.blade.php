@@ -40,7 +40,6 @@
                     alt="office content 2">
             </div>
             <div class="font-light pt-2">
-                <p class="font-archivo text-teal-500 text-lg pb-2">About Us</p>
                 <h2 class="mb-4 text-5xl tracking-tight font-extrabold font-archivo">Building a <span
                         class="text-transparent font-outline-1">Keyboard</span> Made Easier</h2>
                 <p class="mb-4 text-lg font-normal text-gray-700">From routine maintenance to intricate repairs, our team of skilled artisans is dedicated to keeping your keyboard performing at its peak.our customizable keyboards and comprehensive service offerings are designed to elevate your satisfaction to new heights.</p>
@@ -162,7 +161,7 @@
         </div>
     </section>
     <!--footer-->
-    <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
+    <footer class="p-4 bg-black sm:p-6">
         <div class="pt-8 mx-auto max-w-screen-xl">
             <div class="md:flex md:justify-between">
                 <div>
