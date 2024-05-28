@@ -15,6 +15,8 @@ use App\Models\Type;
 use App\Models\CaseType;
 use App\Models\Subscribe;
 
+use Illuminate\Support\Facades\Auth;
+
 use function Laravel\Prompts\confirm;
 
 #[Layout("layouts.livewirelayout")]
@@ -23,7 +25,7 @@ class CustomKeyboard extends Component
 {
     public $currentStep = 1;
     public $totalSteps = 8;
-    public $user_id = 1;
+    public $user_id;
     public $type_id;
     public $case_type_id;
     public $keyswitch_id;
@@ -52,6 +54,7 @@ class CustomKeyboard extends Component
 
     public function mount()
     {
+        $this->user_id = Auth::user()->id;
         $this->assembliesAvailable = Assembly::all();
         $this->switchesAvailable = KeySwitch::all();
         $this->keycapsAvailable = Keycap::all();

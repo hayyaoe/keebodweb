@@ -14,8 +14,8 @@ class Connection extends Model
 
     protected $guarded = ["id"];
 
-    public function customOrder()
+    public function customOrders()
     {
-        return $this->belongsTo(CustomOrder::class);
+        return $this->hasMany(CustomOrder::class);
     }
 }
