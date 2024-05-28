@@ -27,31 +27,31 @@ class CustomOrder extends Model
 
     public function type()
     {
-        return $this->hasOne(Type::class);
+        return $this->belongsTo(Type::class);
     }
 
     public function keyswitch()
     {
-        return $this->hasOne(KeySwitch::class);
+        return $this->belongsTo(KeySwitch::class);
     }
 
     public function keycap()
     {
-        return $this->hasOne(Keycap::class);
+        return $this->belongsTo(Keycap::class);
     }
 
     public function connection()
     {
-        return $this->hasOne(Connection::class);
+        return $this->belongsTo(Connection::class);
     }
 
     public function assembly()
     {
-        return $this->hasOne(Assembly::class);
+        return $this->belongsTo(Assembly::class);
     }
 
     public function caseType()
     {
-        return $this->hasOne(CaseType::class);
+        return $this->belongsTo(CaseType::class);
     }
 }
