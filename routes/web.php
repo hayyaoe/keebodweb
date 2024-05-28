@@ -28,6 +28,10 @@ Route::get("/coming-soon", function () {
     return view("coming-soon");
 })->name("coming-soon");
 
+Route::get("/detail", function () {
+    return view("detail");
+})->name("detail");
+
 Route::get("/subscribe", Subscribe::class)->name("subscribe");
 
 Route::get("/custom-keyboard", CustomKeyboard::class)->name("custom-keyboard");
