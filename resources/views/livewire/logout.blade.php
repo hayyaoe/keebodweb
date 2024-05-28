@@ -1,3 +1,3 @@
 <div>
-    <button wire:click="logout"> LOGOUT </button>
+    <button class="font-archivo text-xl" wire:click="logout"> LOGOUT </button>
 </div>
