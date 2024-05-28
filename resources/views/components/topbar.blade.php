@@ -79,11 +79,19 @@
 					<li class="mb-1">
 						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-teal-50 hover:text-teal-600 rounded" href="{{ route('prebuilt') }}">Lastest Prebuilt</a>
 					</li>
+					@auth
+					<li>
+					    <livewire:logout />
+					</li>
+					@else
+					    <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('register') }}">Register</a>
+					@endauth
 				</ul>
 			</div>
 			<div class="mt-auto">
 				<p class="my-4 text-xs text-center text-gray-400">
-					<span>Copyright © 2021</span>
+					<span>Copyright KEEBOD© 2024</span>
 				</p>
 			</div>
 		</nav>

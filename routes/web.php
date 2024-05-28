@@ -2,6 +2,10 @@
 
 use App\Livewire\CustomKeyboard;
 use App\Livewire\Subscribe;
+use App\Livewire\Register;
+use App\Livewire\Login;
+use App\Livewire\Cart;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
@@ -27,3 +31,9 @@ Route::get("/coming-soon", function () {
 Route::get("/subscribe", Subscribe::class)->name("subscribe");
 
 Route::get("/custom-keyboard", CustomKeyboard::class)->name("custom-keyboard");
+
+Route::get("/register", Register::class)->name("register");
+
+Route::get("/login", Login::class)->name("login");
+
+Route::get("/cart", Cart::class)->name("cart");
