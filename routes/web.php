@@ -39,5 +39,6 @@ Route::get("/custom-keyboard", CustomKeyboard::class)->name("custom-keyboard");
 Route::get("/register", Register::class)->name("register");
 
 Route::get("/login", Login::class)->name("login");
-
-Route::get("/cart", Cart::class)->name("cart");
+Route::middleware(["auth"])->group(function () {
+    Route::get("/cart", Cart::class)->name("cart");
+});
