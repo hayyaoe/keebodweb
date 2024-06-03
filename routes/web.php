@@ -5,7 +5,7 @@ use App\Livewire\Subscribe;
 use App\Livewire\Register;
 use App\Livewire\Login;
 use App\Livewire\Cart;
-
+use App\Livewire\Ongkir;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", function () {
@@ -41,3 +41,9 @@ Route::get("/register", Register::class)->name("register");
 Route::get("/login", Login::class)->name("login");
 
 Route::get("/cart", Cart::class)->name("cart");
+
+Route::get("/ongkir", Ongkir::class)->name("ongkir");
+
+// Route::get('/detail/{transaction}', [CityController::class, 'index'])->name('detail');
+
+// Route::post('/detail/{transaction}', [CityController::class, 'cekOngkir'])->name('cekOngkir');
