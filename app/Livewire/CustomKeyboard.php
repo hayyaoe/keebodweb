@@ -172,7 +172,9 @@ class CustomKeyboard extends Component
         ]);
 
         CustomOrder::create($data);
-        $this->currentStep = 8;
+        // session()->flash('message', 'Order placed successfully!'); // Flashing the message
+        return redirect()->route("home");
+        // $this->currentStep = 8;
     }
 
     public function subscribe()

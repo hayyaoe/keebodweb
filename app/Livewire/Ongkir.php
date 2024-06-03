@@ -2,24 +2,32 @@
 
 namespace App\Livewire;
 
-use App\Models\CustomOrder;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+use App\Models\City;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-use Illuminate\Support\Facades\Auth;
-
 #[Layout("layouts.livewirelayout")]
 #[Title("Custom KeeBod")]
-class Cart extends Component
+
+class Ongkir extends Component
 {
     public $customOrders;
-    private $user;
+    public $user;
     public $prices = [];
     public $shipping = 0;
     public $tax = 0;
     public $subtotal = 0;
     public $total = 0;
+
+    public $cities;
+    public $ongkir;
+    public $originCity;
+    public $destinationCity;
+    public $destination;
+    public $courier;
 
     public function mount()
     {
@@ -42,18 +50,33 @@ class Cart extends Component
         }
 
         $this->total = $this->tax + $this->shipping + $this->subtotal;
+
+        // Initialize city listing and shipping cost variables
+        $this->cities = City::all();
+        $this->ongkir = '';
     }
 
-    public function removeOrder($orderId)
+    public function cekOngkir()
     {
-        $customOrder = CustomOrder::findOrFail($orderId);
-        $customOrder->delete();
+        $originCity = City::find(444)->name;
+        $destinationCity = City::find($this->destination)->name;
 
-        return redirect()->route("cart");
+        $responseCost = Http::withHeaders([
+            'key' => 'b38a1d53265650ebcdb3ec985fdab977'
+        ])->post('https://api.rajaongkir.com/starter/cost', [
+            'origin' => 444,
+            'destination' => $this->destination,
+            'weight' => 1000,
+            'courier' => $this->courier,
+        ]);
+
+        $this->ongkir = $responseCost['rajaongkir'];
+        $this->originCity = $originCity;
+        $this->destinationCity = $destinationCity;
     }
 
     public function render()
     {
-        return view("livewire.cart");
+        return view('livewire.ongkir');
     }
 }
